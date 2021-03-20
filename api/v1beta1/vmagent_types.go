@@ -240,6 +240,9 @@ type VMAgentSpec struct {
 	// ServiceSpec that will be added to vmagent service spec
 	// +optional
 	ServiceSpec *ServiceSpec `json:"serviceSpec,omitempty"`
+	// PodDisruptionBudget created by operator
+	// +optional
+	PodDisruptionBudget *EmbeddedPodDisruptionBudgetSpec `json:"podDisruptionBudget,omitempty"`
 }
 
 // VMAgentRemoteWriteSettings - defines global settings for all remoteWrite urls.
